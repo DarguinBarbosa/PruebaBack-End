@@ -1,0 +1,16 @@
+package com.darguin.prueba_back_end.application.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+
+public class UpdateNameRequest {
+
+    @NotBlank(message = "El nombre no puede estar vacío")
+    private String name;
+
+    public UpdateNameRequest() {}
+
+    public UpdateNameRequest(String name) { this.name = name; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
